@@ -1,0 +1,20 @@
+{
+  "tasks": {
+    "start": "deno main.ts",
+    "dev": "deno -A --watch --env-file main.ts",
+    "test": "deno test --env-file -A",
+    "db": "rm app.db && deno x uql-migrate sync"
+  },
+  "imports": {
+    "#/": "./",
+    "$/": "./src/",
+    "@aws-sdk/client-s3": "npm:@aws-sdk/client-s3@^3.1135.0",
+    "@aws-sdk/lib-storage": "npm:@aws-sdk/lib-storage@^3.1136.0",
+    "@daloyjs/core": "npm:@daloyjs/core@^1.3.4",
+    "@std/assert": "jsr:@std/assert@^1.0.19",
+    "nanoid": "npm:nanoid@^6.0.1",
+    "uql-orm": "npm:uql-orm@^0.53.0",
+    "uuid": "npm:uuid@^14.0.2",
+    "zod": "npm:zod@^4.6.5"
+  }
+}
